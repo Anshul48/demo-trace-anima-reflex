@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Demo Shell - recorded Meta-tool chains</title>
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAFklEQVR4nGPQvbKfJMQwqmFUw/DVAACZM8AQ9SdhHAAAAABJRU5ErkJggg==">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -30,14 +31,14 @@
         <span class="ttfr-label">time to first result</span>
         <span id="ttfr">-- ms</span>
       </div>
-      <button id="runBtn" class="run">Run chain (R)</button>
+      <button id="runBtn" class="run" type="button" disabled>Run chain (R)</button>
     </div>
   </header>
 
   <main class="grid">
     <section class="left" aria-label="Samples and chain">
       <h2>Samples <span class="hint">click or press 1-9</span></h2>
-      <div id="sampleList" class="samples"></div>
+      <div id="sampleList" class="samples" role="group" aria-label="Preloaded samples"></div>
       <h2>Chain <span class="hint" id="chainName"></span></h2>
       <ol id="chainList" class="chain"></ol>
       <h2>Inputs</h2>
@@ -49,12 +50,12 @@
         <div class="progress"><div id="progressBar"></div></div>
         <span id="progressLabel">idle</span>
       </div>
-      <div id="steps" class="steps"></div>
+      <div id="steps" class="steps"><p>Loading preloaded samples...</p></div>
     </section>
   </main>
 
   <footer class="statusbar">
-    <span id="statusLine">Ready. Pick a sample, press Run chain.</span>
+    <span id="statusLine" role="status" aria-live="polite">Loading preloaded samples...</span>
     <span class="keys">keys: 1-9 sample &middot; R run &middot; L toggle mode &middot; ? help</span>
   </footer>
   <div id="helpBox" class="help" hidden>

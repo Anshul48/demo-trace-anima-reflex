@@ -135,3 +135,10 @@ h2:first-child { margin-top: 0; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none; animation: none; }
 }
+
+/* Keep selection and keyboard focus separately visible. */
+button:focus-visible, input:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+.steps > .err { color: var(--bad); font-weight: 600; }
