@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; object-src 'none'; base-uri 'none'">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo Shell - recorded Meta-tool chains</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<noscript><p>This demo page needs JavaScript (no login, no install). Enable JavaScript and reload to run the preloaded samples.</p></noscript>
+<div class="stage">
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot" aria-hidden="true"></span>
+      <div>
+        <div class="title">Demo Shell</div>
+        <div class="subtitle">One-click samples. No login. Replay by default.</div>
+      </div>
+    </div>
+    <div class="controls">
+      <div class="mode" role="group" aria-label="Run mode">
+        <label><input type="radio" name="mode" id="modeReplay" value="replay" checked> REPLAY</label>
+        <label><input type="radio" name="mode" id="modeLive" value="live" disabled title="Live mode needs the local server; this hosted copy replays recorded calls"> LIVE</label>
+      </div>
+      <label class="endpoint">Live endpoint
+        <input type="text" id="liveEndpoint" value="/api/live" size="12" spellcheck="false">
+      </label>
+      <div class="ttfr" title="Time from Run press to first rendered step">
+        <span class="ttfr-label">time to first result</span>
+        <span id="ttfr">-- ms</span>
+      </div>
+      <button id="runBtn" class="run">Run chain (R)</button>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="left" aria-label="Samples and chain">
+      <h2>Samples <span class="hint">click or press 1-9</span></h2>
+      <div id="sampleList" class="samples"></div>
+      <h2>Chain <span class="hint" id="chainName"></span></h2>
+      <ol id="chainList" class="chain"></ol>
+      <h2>Inputs</h2>
+      <pre id="inputPreview" class="inputs">{}</pre>
+    </section>
+
+    <section class="right" aria-label="Progress and results">
+      <div class="progress-row">
+        <div class="progress"><div id="progressBar"></div></div>
+        <span id="progressLabel">idle</span>
+      </div>
+      <div id="steps" class="steps"></div>
+    </section>
+  </main>
+
+  <footer class="statusbar">
+    <span id="statusLine">Ready. Pick a sample, press Run chain.</span>
+    <span class="keys">keys: 1-9 sample &middot; R run &middot; L toggle mode &middot; ? help</span>
+  </footer>
+  <div id="helpBox" class="help" hidden>
+    <strong>Shortcuts</strong>
+    <ul>
+      <li><kbd>1</kbd>-<kbd>9</kbd> select sample</li>
+      <li><kbd>R</kbd> run chain</li>
+      <li><kbd>?</kbd> toggle this help</li>
+    </ul>
+    <p>REPLAY plays recorded <code>samples/*.replay.json</code> so the demo needs no login and makes no live model calls (serve this folder over HTTP).
+    LIVE posts each tool to the endpoint above (default stub <code>/api/live</code>).</p>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

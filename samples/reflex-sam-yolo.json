@@ -1,0 +1,16 @@
+{
+ "id": "reflex-sam-yolo",
+ "title": "Reflex SAM+YOLO (boxes STUB until F2 clears)",
+ "description": "One-click Reflex v0: SAM 3.1 auto-label -> YOLO tier + relevance filter -> Muse Spark action choice. Overlay boxes are STUB (no detector run yet); step 4 shows the MEASURED Spark VLM-only baseline (real calls, n=12 synthetic).",
+ "chain": [
+  "SAM 3.1 auto-label",
+  "YOLO tier + relevance filter",
+  "Muse Spark action choice",
+  "VLM-only baseline (MEASURED)",
+  "SAM 3.1 refine (MEASURED, SA-*)"
+ ],
+ "inputs": {
+  "goal": "Save the current settings",
+  "image": "sample.svg (STUB frame, embedded as data URI in replay step 1)"
+ }
+}

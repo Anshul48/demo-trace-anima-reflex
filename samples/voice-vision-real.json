@@ -1,0 +1,16 @@
+{
+ "id": "voice-vision-real",
+ "title": "REAL: voice -> Muse Spark vision -> verify (recorded calls)",
+ "description": "Real Meta tool calls recorded on 2026-11-02 (pure vision, agent tools off): speech transcription, then Muse Spark finds the named element on a synthetic GUI screenshot, then a deterministic check against the generator's ground truth. Synthetic screenshots, TTS speech, small n; replay shows the recorded timings, not a live run.",
+ "chain": [
+  "Muse voice transcribe",
+  "Muse Spark vision grounding",
+  "Deterministic verify vs ground truth",
+  "Aggregate over every task in the run"
+ ],
+ "inputs": {
+  "audio": "000000.m4a (TTS clip)",
+  "image": "synthetic GUI screenshot 000000.png (640x480)",
+  "run_receipts": "comp-kit/real-chain/runs/"
+ }
+}

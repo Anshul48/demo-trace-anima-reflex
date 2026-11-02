@@ -1,0 +1,1 @@
+{"chain": ["trace-recall", "spark-draft", "table-format"], "description": "Grounded TRACE numbers plus a draft step. No login, one click.", "id": "trace-recall", "inputs": {"query": "guided recall at 10M tokens?", "top_k": 5}, "title": "TRACE recall + draft"}
