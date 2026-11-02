@@ -1,7 +1,7 @@
 {
  "id": "four-tool-chain",
  "title": "REAL: Spark text -> Muse Image -> SAM 3.1 -> Spark vision (recorded 2026-11-02)",
- "description": "Real four-tool Meta chain recorded 2026-11-02, subject 1 of 3 (notification preferences with toggle switches and top tabs): Muse Spark text wrote the image prompt, Muse Image generated the UI screenshot, SAM 3.1 proposed 12 boxes over 4 phrases (HTTP 200 each), Muse Spark pure vision named all 12 numbered marks. Replay only: steps replay the recorded calls with their recorded durations and make no live model calls. Run footer gives the 3-run totals as counts only (generated images have no ground truth).",
+ "description": "Real four-tool Meta chain recorded 2026-11-02, recorded run s1 (notification preferences with toggle switches and top tabs): Muse Spark text wrote the image prompt, Muse Image generated the UI screenshot, SAM 3.1 proposed 12 boxes over 4 phrases (HTTP 200 each), Muse Spark pure vision named all 12 numbered marks. Replay only: steps replay the recorded calls with their recorded durations and make no live model calls. Run footer gives the 3-run totals as counts only (generated images have no ground truth).",
  "chain": [
   "Muse Spark text writes the image prompt",
   "Muse Image generates the UI screenshot",

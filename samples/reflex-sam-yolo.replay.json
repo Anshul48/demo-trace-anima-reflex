@@ -394,6 +394,24 @@
      ["caveats", "n=12 synthetic; class names supplied as prompts; button-alone 64/69 post-hoc (SA-08); canonical re-run, raw responses kept", "SA-08, SA-10, SA-11; exploratory"]
     ]
    }
+  },
+  {
+   "tool": "YOLOX-nano detector (MEASURED, YX-*)",
+   "status": "ok",
+   "duration_ms": 300,
+   "timing": "data-measured; pause-stub",
+   "output": {
+    "kind": "table",
+    "columns": ["metric", "value", "note"],
+    "rows": [
+     ["A any-class recall", "98.1%", "YX-01"],
+     ["A class-correct", "82.9%", "YX-02"],
+     ["B any-class recall", "98.8%", "YX-04"],
+     ["B class-correct", "85.4%", "YX-05"],
+     ["protocol", "IoU50, audit conf threshold, class-agnostic NMS", "YX-01, YX-04; audit thresholds"],
+     ["caveats", "test split on surfaces unseen in training (theme x DPI x locale); independent re-score of saved predictions; not a matched comparison with SAM or Spark; no real-GUI generalisation", "YX-01 to YX-06; synthetic test split"]
+    ]
+   }
   }
  ]
 }
