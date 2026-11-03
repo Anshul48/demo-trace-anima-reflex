@@ -175,13 +175,95 @@
    }
   },
   {
-   "tool": "Run footer (3 runs, counts only)",
+   "tool": "Run footer (earlier 3 runs, counts only)",
    "status": "ok",
    "duration_ms": 1,
    "timing": "computed",
    "output": {
     "kind": "text",
-    "text": "3 of 3 runs ok, 36 of 36 marks named, counts only: generated images have no ground truth, so no accuracy is claimed; SAM candidate cap is 12 per image"
+    "text": "Earlier 3-run record of this chain: 3 of 3 runs ok, 36 of 36 marks named, counts only: those runs carried no ground-truth labels, so they claim no accuracy; SAM candidate cap is 12 per image. The steps after this one replay the later measured run."
+   }
+  },
+  {
+   "tool": "Label recall on 24 synthetic images (MEASURED, IA-*; recorded scores, replay only)",
+   "status": "ok",
+   "duration_ms": 300,
+   "timing": "data-measured; pause-stub",
+   "output": {
+    "kind": "table",
+    "columns": [
+     "metric",
+     "value",
+     "note"
+    ],
+    "rows": [
+     [
+      "label recall, pre-registered main result (strict)",
+      "90 of 120 (75.0%)",
+      "IA-01, IA-03; Wilson interval 66.6% to 81.9% at confidence level 0.95 (IA-04, IA-05); a cluster bootstrap over images gives a wider interval; one seed"
+     ],
+     [
+      "images by status",
+      "20 of 24 ok; 4 of 24 image_error",
+      "IA-06, IA-07; the 4 failures (images 1, 7, 13, 19) are a file-type limit in the chain code (.jpg saved, .png expected); they stay in the denominator"
+     ],
+     [
+      "label precision (named marks carrying an intended label)",
+      "143 of 228 (62.7%)",
+      "IA-11, IA-12; SAM also marks icons, tabs and rows that carry no intended label"
+     ],
+     [
+      "control: mismatched label sets",
+      "46.7% of labels recovered from the other 23 images' label sets",
+      "IA-13; common UI words overlap, so the matched-minus-mismatched gap is the meaningful figure"
+     ],
+     [
+      "matched minus mismatched gap",
+      "0.283 (mean per image)",
+      "IA-14; matched above mismatched in 19 of 24 images, equal in 5 of 24 (IA-15, IA-16)"
+     ],
+     [
+      "registration",
+      "self-registered file written before the first model call",
+      "real-chain/runs/prereg-image-acc.json; not an external registry"
+     ],
+     [
+      "caveats",
+      "synthetic AI-generated screenshots; exploratory; one seed; 24 images; no user benefit measured",
+      "measures label recovery, not localisation; a mark named with the label word counts even if it is not the button (the control bounds this)"
+     ]
+    ]
+   }
+  },
+  {
+   "tool": "Post-hoc re-run of the 4 failed images (NOT pre-registered, IA-*; recorded scores, replay only)",
+   "status": "ok",
+   "duration_ms": 300,
+   "timing": "data-measured; pause-stub",
+   "output": {
+    "kind": "table",
+    "columns": [
+     "metric",
+     "value",
+     "note"
+    ],
+    "rows": [
+     [
+      "re-run images 1, 7, 13, 19",
+      "20 of 20 labels found",
+      "IA-22; stages 3 to 6 on the recorded stage-1 prompt and the recorded JPEGs converted to PNG; no new image generation"
+     ],
+     [
+      "merged label recall (post-hoc)",
+      "110 of 120 (91.7%)",
+      "IA-17, IA-19; Wilson interval 85.3% to 95.4% at confidence level 0.95 (IA-20, IA-21); the chain minus the file-type limit, not the measured result above"
+     ],
+     [
+      "status",
+      "post-hoc supplement, not pre-registered; headline unchanged",
+      "written after seeing the failures; an estimate of the chain without the file-type limit, with the same synthetic, one-seed caveats"
+     ]
+    ]
    }
   }
  ]
