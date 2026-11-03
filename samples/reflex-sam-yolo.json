@@ -1,17 +1,19 @@
 {
- "id": "reflex-sam-yolo",
- "title": "Reflex SAM+YOLO (boxes STUB until F2 clears)",
- "description": "One-click Reflex v0: SAM 3.1 auto-label -> YOLO tier + relevance filter -> Muse Spark action choice. Overlay boxes are STUB (no detector run yet); step 4 shows the MEASURED Spark VLM-only baseline (real calls, n=12 synthetic).",
- "chain": [
-  "SAM 3.1 auto-label",
-  "YOLO tier + relevance filter",
-  "Muse Spark action choice",
-  "VLM-only baseline (MEASURED)",
-  "SAM 3.1 refine (MEASURED, SA-*)",
-  "YOLOX-nano detector (MEASURED, YX-*)"
- ],
- "inputs": {
-  "goal": "Save the current settings",
-  "image": "sample.svg (STUB frame, embedded as data URI in replay step 1)"
- }
+  "id": "reflex-sam-yolo",
+  "title": "Reflex: recorded SAM + Spark chain, with measured detector numbers",
+  "description": "Reflex v0 on one SOLVED task from the recorded set-of-mark chain (task 000006 of seed 41): SAM 3.1 candidate boxes, numbered marks, Muse Spark choice of one mark. Steps 4 to 6 show MEASURED numbers from earlier runs: the Spark VLM-only baseline, SAM 3.1 refine and the YOLOX-nano detector (synthetic screenshots). Replay only; no live model calls.",
+  "chain": [
+    "SAM 3.1 propose candidates",
+    "Numbered-mark image",
+    "Muse Spark set-of-mark choice",
+    "VLM-only baseline (MEASURED)",
+    "SAM 3.1 refine (MEASURED, SA-*)",
+    "YOLOX-nano detector (MEASURED, YX-*)"
+  ],
+  "inputs": {
+    "task_id": "000006",
+    "seed": 41,
+    "transcript": "Click the country drop down.",
+    "marked_image": "inputs/run/marked/000006.png (4 numbered marks, embedded as a data URI in the replay)"
+  }
 }
