@@ -89,32 +89,32 @@
           [
             "recall@IoU50, pure vision (tools off)",
             "20.3% (14 of 69 GT boxes)",
-            "n=12 images; synthetic screenshots only"
+            "n=12 images; synthetic screenshots only; RC-04/RC-05/VP-04/VP-05"
           ],
           [
             "recall@IoU50, agentic (GT isolated)",
             "23.2% (16 of 69)",
-            "tools allowed, GT outside agent paths"
+            "tools allowed, GT outside agent paths; RC-06/RC-07/VA-04/VA-05"
           ],
           [
             "class accuracy of hits",
             "92.9% pure (13/14); 81.2% agentic (13/16)",
-            "conditional on IoU50 hit"
+            "conditional on IoU50 hit; VP-06/VA-06 (derived, allowlisted)"
           ],
           [
             "mean latency",
             "72.0 s/image pure; 101.6 s agentic",
-            "VLM-only cost; motivates detector-first design"
+            "VLM-only cost; motivates detector-first design; VP-07/VA-07"
           ],
           [
             "model flags",
             "muse-spark-1.3 / max / contributor",
-            "as run"
+            "as run (no numeric claim)"
           ],
           [
             "caveats",
             "n small; synthetic only",
-            "runs vlm-pure + vlm-agentic-isolated-20261102; an earlier unisolated run was withdrawn"
+            "runs vlm-pure + vlm-agentic-isolated-20261102; an earlier unisolated run was withdrawn; RC-01/VP-01/VA-01"
           ]
         ]
       }
