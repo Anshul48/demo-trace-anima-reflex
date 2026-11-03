@@ -1,14 +1,14 @@
 {
  "id": "sam-som-chain",
  "title": "REAL: SAM proposes, Spark chooses (recorded set-of-mark chain, solved task)",
- "description": "Recorded set-of-mark chain on one SOLVED task (000006 of seed 41, dropdown, chain hit, direct miss): recorded voice transcript -> SAM 3.1 candidate boxes with numbered marks -> Muse Spark choice of one mark -> deterministic IoU check vs ground truth. Replay only; no live model calls. Synthetic screenshots; transcripts recorded from a prior chain run; small n. Fresh-seed confirmation: seed 41 (variant fixed in advance) 16 of 20 IoU>=0.5 vs 3 of 20 direct; seed 23: 12 of 20 vs 5 of 20, exploratory; checkbox elements remain a failure case.",
+ "description": "Recorded set-of-mark chain on one SOLVED task (000006 of seed 41, dropdown, chain hit, direct miss): recorded voice transcript -> SAM 3.1 candidate boxes with numbered marks -> Muse Spark choice of one mark -> deterministic IoU check vs ground truth. Replay only; no live model calls. Synthetic screenshots; transcripts recorded from a prior chain run; small n. Fresh-seed confirmation: seed 41 (variant fixed in advance) 16 of 20 IoU>=0.5 vs 3 of 20 direct; seed 59 (pipeline frozen and pre-registered) 16 of 20 vs 3 of 20; seed 23: 12 of 20 vs 5 of 20, exploratory; checkbox elements remain a failure case.",
  "chain": [
   "Recorded voice transcript",
   "SAM 3.1 propose candidates",
   "Numbered-mark image",
   "Muse Spark set-of-mark choice",
   "Deterministic verify vs ground truth",
-  "Run footer (2 seeds, n=20 per seed, exploratory)"
+  "Run footer (3 seeds, n=20 per seed, exploratory)"
  ],
  "inputs": {
   "task_id": "000006",

@@ -70,13 +70,13 @@
    }
   },
   {
-   "tool": "Run footer (2 seeds, n=20 per seed, exploratory)",
+   "tool": "Run footer (3 seeds, n=20 per seed, exploratory)",
    "status": "ok",
    "duration_ms": 1,
    "timing": "computed",
    "output": {
     "kind": "text",
-    "text": "Seed 41 (fresh, variant fixed in advance): 16 of 20 IoU>=0.5 with SAM proposing and Spark choosing vs 3 of 20 for direct grounding. Seed 23: 12 of 20 vs 5 of 20 (the button phrase was added after seeing that run). Synthetic screenshots, TTS speech, n=20 per seed, exploratory; checkbox elements remain a failure case."
+    "text": "Seed 41 (fresh, variant fixed in advance): 16 of 20 IoU>=0.5 with SAM proposing and Spark choosing vs 3 of 20 for direct grounding. Seed 59 (fresh, pipeline frozen and pre-registered before the run): 16 of 20 vs 3 of 20. Seed 23: 12 of 20 vs 5 of 20 (the button phrase was added after seeing that run). Synthetic screenshots, TTS speech, n=20 per seed, exploratory; checkbox elements remain a failure case."
    }
   }
  ]
